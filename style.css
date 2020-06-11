@@ -35,6 +35,7 @@ Last Update: March 14, 2019
 --------------------------------------------- */
 /* Import Fonts & All CSS */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700");
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 @import url(css/bootstrap.min.css);
 @import url(css/animate.css);
 @import url(css/default-assets/classy-nav.css);
@@ -2749,3 +2750,22 @@ input:required {
         margin-right: 3px; }
 
 /*# sourceMappingURL=style.css.map */
+
+.schedule-container {
+  width: 100px;
+  height: 100px;
+}
+
+.schedule-logo {
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  flex-direction: column;
+  font-family: 'Metal Mania', cursive;
+}
