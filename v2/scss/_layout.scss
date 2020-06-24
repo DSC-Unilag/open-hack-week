@@ -1,0 +1,42 @@
+.header {
+    font-size: 2rem;
+	height: 7rem;
+
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+    padding: 0rem 10rem;
+    margin-top: 2.5rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.about {
+    display: flex;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 3rem 10rem;
+    justify-content: space-between;
+}
+
+.schedule {
+    text-align: center;
+    padding: 6.5rem 18rem;
+    background-color: var(--color-primary);
+}
+
+.events {
+    text-align: center;
+    padding: 6.5rem 5rem;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8rem 25rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}

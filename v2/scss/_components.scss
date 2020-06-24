@@ -1,0 +1,381 @@
+///////////////
+// Extras
+.virtual_icon {
+  width: 10rem;
+  margin-left: -1rem;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  fill: #fff;
+  top: 13rem;
+  z-index: 2;
+}
+
+.btn-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  margin-right: 0.5rem;
+}
+
+///////////////
+// Logo
+.logo {
+  &__icon-box {
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+    fill: var(--color-secondary-blue);
+  }
+}
+
+//////////////
+// Navigation
+.user-nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+
+  &__item {
+    list-style: none;
+    font-size: 1.9rem;
+    color: var(--color-secondary-blue);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      margin-top: -0.3rem;
+      border-bottom: 2px groove var(--color-secondary-blue);
+      width: 0%;
+      transition: width 0.5s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/////////////
+// Banner
+.banner__top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  top: 9rem;
+
+  & > * {
+    margin: 0.5rem;
+  }
+
+  &-icon {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  &-logo {
+    width: 16rem;
+    height: 5rem;
+    fill: var(--color-primary);
+  }
+}
+
+.banner__top-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > h3 {
+    color: var(--color-primary);
+    line-height: 1.5rem;
+  }
+}
+
+.banner__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  background-color: #131353;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-light-blue);
+    line-height: 4rem;
+    height: 50%;
+    padding-top: 1.5rem;
+
+    & > h3 {
+      font-size: 3.5rem;
+    }
+
+    & > p {
+      font-size: 2rem;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 28rem;
+  }
+
+  &-icon {
+    width: 4rem;
+    margin-top: 2rem;
+  }
+}
+
+///////////
+// About
+.about__diagram {
+  height: 65rem;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about__content {
+  width: 60%;
+
+  & > h3 {
+    color: var(--color-secondary-blue);
+    font-size: 3.2rem;
+  }
+
+  & > p {
+    color: #fafaff;
+    font-size: 1.6rem;
+  }
+}
+
+///////////////
+// Participation
+.participation {
+  display: flex;
+  width: 100%;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 8rem 0;
+  }
+
+  &__card {
+    position: relative;
+    width: 35rem;
+    border-radius: 1.6rem;
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+
+    &-img {
+      position: absolute;
+      top: -9rem;
+      height: 20rem;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-content {
+      padding-top: 7rem;
+      & p {
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: bold;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  & h1 {
+    font-size: 5rem;
+  }
+
+  &__hacker {
+    background-color: var(--color-secondary);
+    box-shadow: 0px 4px 8px rgba(19, 19, 83, 0.25);
+    & h1 {
+      color: var(--color-primary);
+    }
+  }
+
+  &__ngo {
+    background-color: #ffe6ee;
+    box-shadow: 0px 4px 8px rgba(241, 34, 114, 0.15);
+    & h1 {
+      color: var(--color-primary-pink);
+    }
+  }
+}
+
+///////////////
+// Schedule
+.schedule {
+  & > .virtual_icon {
+    width: 16rem;
+    height: 7rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+    color: var(--color-secondary);
+    line-height: 3rem;
+  }
+
+  &__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    padding: 0 3rem;
+    background-color: #1d1d7d;
+    border-radius: 0.8rem;
+    color: var(--color-light-blue);
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+
+    & > h1 {
+      font-size: 7rem;
+      margin-right: 4rem;
+    }
+
+    &-info {
+      text-align: left;
+      font-size: 1.2rem;
+    }
+
+    &-icon {
+      margin-left: auto;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:last-child {
+      width: 100%;
+    }
+  }
+
+  &__card.half {
+    width: 49%;
+  }
+}
+
+//////////////
+// Events
+.events {
+  &__title {
+    font-size: 4rem;
+    color: var(--color-primary);
+    line-height: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    padding: 4rem;
+
+    &-img {
+      padding: 1rem;
+      background: #ffffff;
+      box-shadow: 0px 4px 8px rgba(19, 19, 83, 0.25);
+      width: 30rem;
+      height: 30rem;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+    }
+
+    & > p {
+      font-size: 1.8rem;
+      color: #666666;
+      margin: 2rem 0;
+    }
+  }
+}
+
+////////////
+// Footer
+.footer {
+  &__links {
+    flex: 1;
+    & > h2 {
+      color: #fafaff;
+      font-size: 2rem;
+    }
+
+    &-list {
+      list-style: none;
+    }
+  }
+
+  &__link {
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+  }
+
+  &__logo {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    align-items: flex-end;
+
+    & > .logo__icon {
+      width: 13rem;
+      height: 4rem;
+      fill: var(--color-secondary);
+    }
+
+    & > .virtual_icon {
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+  }
+}

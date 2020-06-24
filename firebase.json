@@ -2,10 +2,18 @@
   "hosting": {
     "site": "ohw2020",
     "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/ngo",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf_vz1E19EuJjKr8C1pjVcwx-SxXk5QRkYZ8pMK-iQoXBEopA/viewform?usp=sf_link",
+        "type": 301
+      },
+      {
+        "source": "/NGO",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf_vz1E19EuJjKr8C1pjVcwx-SxXk5QRkYZ8pMK-iQoXBEopA/viewform?usp=sf_link",
+        "type": 301
+      }
     ],
     "rewrites": [
       {

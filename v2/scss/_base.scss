@@ -1,0 +1,76 @@
+// Import Custom Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700&display=swap");
+
+:root {
+  --color-primary: #131353;
+  --color-secondary: #b6b6fb;
+  --color-primary-pink: #f4508f;
+  --color-primary-pink-light: #ffe6ee;
+  --color-secondary-blue: #505c92;
+  --color-light-blue: #e5e5ff;
+}
+
+$bp-largest: 75rem; //1200px
+$bp-large: 68.75rem; //1100px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Mandali", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem 2.8rem;
+  border-radius: 0.8rem;
+  color: #fff;
+  background-color: var(--color-primary);
+  text-align: center;
+  border: none;
+  transition: all .4s ease-in-out;
+
+  &.participate-btn {
+    background-color: var(--color-primary-pink);
+  }
+
+  &.sponsor-btn {
+    color: var(--color-primary);
+    background-color: var(--color-light-blue);
+  }
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
