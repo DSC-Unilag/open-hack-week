@@ -94,8 +94,8 @@ a {
   display: flex;
   background-color: var(--color-primary);
   color: #fff;
-  padding: 10rem 10rem;
-  margin-top:-5rem;
+  padding: 15rem 10rem;
+  margin-top:-10rem;
   justify-content: space-between; }
 
 .schedule {
@@ -396,6 +396,7 @@ a {
   }
   .user-nav__item{
     font-size:1.2rem;
+    padding-top:1.5rem;
   }
   .banner__top{
     top:6vh;
@@ -472,4 +473,17 @@ a {
       align-self: flex-end;
   }
 
+  .user-nav{
+    display:none;
+  }
+}
+
+@media screen and (max-width:320px){
+  .banner__top{
+    top:13vh;
+    z-index:5;
+  }
+  .banner__top img {
+    width: 100vw;
+  }
 }
