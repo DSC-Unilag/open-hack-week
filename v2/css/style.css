@@ -43,14 +43,31 @@ button {
   background-color: var(--color-primary);
   text-align: center;
   border: none;
-  transition: all .4s ease-in-out; }
+  background-position: center;
+  /* transition: background 0.8s; */
+  transition: all .2s ease-out; }
   button.participate-btn {
-    background-color: var(--color-primary-pink); }
+    background-color: var(--color-primary-pink);
+    }
   button.sponsor-btn {
     color: var(--color-primary);
     background-color: var(--color-light-blue); }
+  button.sponsor-btn:hover {
+    background: var(--color-light-blue) radial-gradient(circle, transparent 1%, var(--color-light-blue) 1%) center/15000%;
+    box-shadow:0px 2px 4px #80808050;
+    transform:translateY(-3px);}
+  button.sponsor-btn:active {
+      background-color: var(--color-primary);
+      background-size: 100%;
+      transition: background 0s;} 
   button:hover {
-    transform: rotate(360deg); }
+      background: var(--color-primary-pink) radial-gradient(circle, transparent 1%, var(--color-primary-pink) 1%) center/15000%;
+      box-shadow:0px 2px 4px #80808050;
+      transform:translateY(-3px);}
+  button:active {
+      background-color: var(--color-primary);
+      background-size: 100%;
+      transition: background 0s;} 
 
 a {
   text-decoration: none;
@@ -66,13 +83,19 @@ a {
   margin-top: 2.5rem; }
 
 .banner {
-  position: relative; }
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  position: relative;
+  overflow:hidden 
+}
 
 .about {
   display: flex;
   background-color: var(--color-primary);
   color: #fff;
-  padding: 3rem 10rem;
+  padding: 10rem 10rem;
+  margin-top:-5rem;
   justify-content: space-between; }
 
 .schedule {
@@ -97,11 +120,15 @@ a {
   margin-left: -1rem; }
 
 .wave {
+  margin-bottom:10vh;
+  /* height:80vh; */
+  width: 120vw;
+  padding: 0;
   position: absolute;
-  width: 100%;
-  fill: #fff;
-  top: 13rem;
-  z-index: 2; }
+  vertical-align:middle;
+  /* fill: #fff; */
+  top: 22rem;
+  z-index: -1; }
 
 .btn-icon {
   width: 2rem;
@@ -141,8 +168,8 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 3;
-  top: 9rem; }
+  z-index: -1;
+  top: 3vh; }
   .banner__top > * {
     margin: 0.5rem; }
   .banner__top-icon {
@@ -152,6 +179,9 @@ a {
     width: 16rem;
     height: 5rem;
     fill: var(--color-primary); }
+  .banner__top img{
+    width:65vw;
+  }
 
 .banner__top-info {
   display: flex;
@@ -167,9 +197,10 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  background-color: #131353;
-  padding-top: 15rem;
-  padding-bottom: 5rem; }
+  /* background-color: #131353; */
+  margin-top:-22vh;
+  padding-top: 25vh;
+  padding-bottom: 20vh; }
   .banner__bottom-content {
     display: flex;
     flex-direction: column;
@@ -214,18 +245,29 @@ a {
     align-items: center;
     justify-content: center;
     width: 50%;
-    padding: 8rem 0; }
+    padding: 16rem; }
   .participation__card {
+    display:flex;
     position: relative;
     width: 35rem;
     border-radius: 1.6rem;
     background-color: #fff;
     text-align: center;
-    padding: 2rem; }
+    font-weight:lighter;
+    color:#333;
+    padding: 5rem; }
+    .participation__hacker .participation__card{
+      box-shadow: 0px 4px 8px rgba(19, 19, 83, 0.25);
+    }
+    .participation__ngo .participation__card{
+      box-shadow: 0px 4px 8px rgba(241, 34, 114, 0.15);
+    }
     .participation__card-img {
       position: absolute;
+      vertical-align: middle;
       top: -9rem;
-      height: 20rem; }
+      height: 20rem; 
+      margin-right:5rem; }
       .participation__card-img img {
         width: 100%;
         height: 100%; }
@@ -234,9 +276,9 @@ a {
       .participation__card-content p {
         font-size: 2.4rem;
         text-align: center;
-        font-weight: bold;
+        font-weight:normal;
         line-height: 3rem;
-        margin-bottom: 1rem; }
+        margin-bottom: 2rem; }
   .participation h1 {
     font-size: 5rem; }
   .participation__hacker {
@@ -347,3 +389,87 @@ a {
   .footer__logo > .virtual_icon {
     margin-left: 0;
     margin-right: 2rem; }
+
+@media screen and (max-width:750px){
+  .header{
+    padding:0 4rem;
+  }
+  .user-nav__item{
+    font-size:1.2rem;
+  }
+  .banner__top{
+    top:6vh;
+  }
+  .banner__top img {
+    width: 70vw;
+  }
+  .banner__bottom-content{
+    transform: translateY(12vh);
+  }
+  .banner__bottom-content > p {
+    font-size: 1.5rem;
+  }
+  .banner__bottom-content > h3 {
+    font-size: 2rem;
+  }
+  .about{
+    padding: 25rem 5rem;
+    margin-top:-25vh;
+  }
+  .about__diagram{
+    display:none;
+  }
+  .about__content {
+    width: 100%;
+  }
+  .participation {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+  }
+  .participation__card{
+    width:30rem;
+  }
+  .participation__hacker, .participation__ngo{
+    width: 100vw;
+  }
+  .participation__hacker h1, .participation__ngo h1{
+    font-size:3rem;
+  }
+  .schedule{
+    min-width:90vw;
+    align-items:center;
+    padding:5rem 0;
+  }
+  .schedule__card.half{
+    width:80vw;
+  }
+  .schedule__card:last-child{
+    width:80vw;
+  }
+  .schedule__card-container{
+    min-width: 90vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .schedule__card-icon img{
+    width: 10rem;
+  }
+  .schedule-card{
+    min-width:90vw;
+  }
+  .events__container{
+    justify-content:center;
+  }
+  .footer{
+    min-width: 100vw;
+    padding: 7vw;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__logo{
+      margin-top: 5rem;
+      align-self: flex-end;
+  }
+
+}
