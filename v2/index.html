@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    
+    <div class="overlay hide"></div>
     <header class="header">
       <div class="logo__icon-box">
         <a href="/">
@@ -16,49 +16,36 @@
           </svg>
         </a>
       </div>
-      
-    <nav class="user-nav">
+      <div class="burger burger-slip mobile-menu" onclick="toggleMobileNav()">
+        <div class="burger-lines"></div>
+      </div>
+      <nav class="user-nav">
         <li class="user-nav__item"><a href="#participation">Participate</a></li>
         <li class="user-nav__item"><a href="#schedule">Schedule</a></li>
         <li class="user-nav__item"><a href="#events">Events</a></li>
         <li class="user-nav__item"><a href="#">Gallery</a></li>
       </nav>
-
+      <nav class="mobile-menu__nav hide">
+        <li class="user-nav__item" onclick="toggleMobileNav()">
+          <a href="#participation">Participate</a>
+        </li>
+        <li class="user-nav__item" onclick="toggleMobileNav()">
+          <a href="#schedule">Schedule</a>
+        </li>
+        <li class="user-nav__item" onclick="toggleMobileNav()">
+          <a href="#events">Events</a>
+        </li>
+        <li class="user-nav__item" onclick="toggleMobileNav()">
+          <a href="#">Gallery</a>
+        </li>
+      </nav>
     </header>
     <main>
       <section class="banner">
         <div class="banner__top">
-          <img src="./assets/svgs/top-illustration.svg" alt="top illustration"/>
-            
-          <!-- <img
-            class="banner__top-icon"
-            src="assets/svgs/female.svg"
-            alt="Female Coder"
-          />
-          <div class="banner__top-info">
-            <svg class="banner__top-logo">
-              <use xlink:href="assets/svgs/sprite.svg#logo"></use>
-            </svg>
-            <h3>Open Hack Week 2.0</h3>
-            <img
-              class="virtual_icon"
-              src="assets/svgs/virtual.svg"
-              alt="Virtual Hackathon"
-            />
-          </div>
-          <img 
-            class="banner__top-icon"
-            src="assets/svgs/male.svg"
-            alt="Male Coder"
-          /> -->
+          <img src="./assets/svgs/top-illustration.svg" alt="top illustration" />
         </div>
-          <img class="wave" src="./assets/svgs/wave.svg" alt="wave">
-        <!-- <svg class="wave" viewBox="0 0 500 149" preserveAspectRatio="none">
-          <path
-            d="M-2.63,111.68 C155.94,31.74 353.46,27.79 501.88,109.70 L500.18,0.17 L0.19,-1.80 Z"
-            style="stroke: none;"
-          ></path>
-        </svg> -->
+        <img class="wave" src="./assets/svgs/wave.svg" alt="wave" />
         <div class="banner__bottom">
           <div class="banner__bottom-content">
             <h3>Open Hack Week 2.0</h3>
@@ -121,7 +108,9 @@
             </div>
             <div class="participation__card-content">
               <p>Register to participate in Open Hack Week</p>
-              <button class="participate-btn btnfos-5"><span>Participate</span></button>
+              <button class="participate-btn btnfos-5">
+                <span>Participate</span>
+              </button>
             </div>
           </article>
           <h1>PARTICIPANT</h1>
@@ -267,5 +256,6 @@
         />
       </div>
     </footer>
+    <script src="js/app.js" async></script>
   </body>
 </html>

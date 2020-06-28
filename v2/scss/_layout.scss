@@ -1,44 +1,76 @@
 .header {
-    font-size: 2rem;
-	height: 7rem;
+  font-size: 2rem;
+  height: 7rem;
 
-	display: flex;
-	justify-content: space-between;
-    align-items: center;
-    padding: 0rem 10rem;
-    margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 10rem;
+  margin-top: 2.5rem;
+
+  @media screen and (max-width: $bp-largest) {
+    padding: 0 4rem;
+  }
 }
 
 .banner {
-    position: relative;
+  position: relative;
 }
 
 .about {
-    display: flex;
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 20rem 10rem;
-    margin-top: -10rem;
-    justify-content: space-between;
+  display: flex;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 20rem 10rem;
+  margin-top: -10rem;
+  justify-content: space-between;
+
+  @media screen and (max-width: $bp-largest) {
+    padding: 25rem 5rem;
+    margin-top: -25vh;
+  }
+}
+
+.participation {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: $bp-largest) {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+  }
+
+  /* Tablet */
+  @media only screen and (min-width: 768px) and (max-width: 1000px) {
+   flex-direction: row;
+   align-items: unset;
+  }
 }
 
 .schedule {
-    text-align: center;
-    padding: 6.5rem 18rem;
-    background-color: var(--color-primary);
+  text-align: center;
+  padding: 6.5rem 18rem;
+  background-color: var(--color-primary);
+
+  @media screen and (max-width: $bp-largest) {
+    min-width: 90vw;
+    align-items: center;
+    padding: 5rem 0;
+  }
 }
 
 .events {
-    text-align: center;
-    padding: 6.5rem 5rem;
+  text-align: center;
+  padding: 6.5rem 5rem;
 }
 
 .footer {
-    display: flex;
-    width:100vw;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 8rem 25rem;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 8rem 25rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
