@@ -13,6 +13,11 @@
         "source": "/NGO",
         "destination": "https://docs.google.com/forms/d/e/1FAIpQLSf_vz1E19EuJjKr8C1pjVcwx-SxXk5QRkYZ8pMK-iQoXBEopA/viewform?usp=sf_link",
         "type": 301
+      },
+      {
+        "source": "/hacker",
+        "destination": "https://docs.google.com/forms/d/e/1FAIpQLScgCqYBvcebih60yM2Esc4Xljd5auJi7vskKTuFfuCXQs8rtw/viewform",
+        "type": 301
       }
     ],
     "rewrites": [
