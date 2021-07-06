@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "ohw2020",
+    "site": "ohw2021",
     "public": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
@@ -18,7 +18,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/v2/index.html"
       },
       {
         "source": "/v2",
